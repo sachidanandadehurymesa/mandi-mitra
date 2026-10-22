@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --color-forest: #14532d;
+  --color-forest-dark: #0d3a20;
+  --color-green: #22c55e;
+  --color-green-light: #dcfce7;
+  --color-bg: #f8faf5;
+  --color-surface: #ffffff;
+  --color-text: #17211b;
+  --color-text-muted: #4b5a50;
+  --color-gold: #facc15;
+  --color-border: #e3e8de;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fee2e2;
+}
+
+@theme inline {
+  --color-forest: var(--color-forest);
+  --color-forest-dark: var(--color-forest-dark);
+  --color-green: var(--color-green);
+  --color-green-light: var(--color-green-light);
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-gold: var(--color-gold);
+  --color-border: var(--color-border);
+  --color-danger: var(--color-danger);
+  --color-danger-bg: var(--color-danger-bg);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+::selection {
+  background: var(--color-green-light);
+  color: var(--color-forest-dark);
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+}
